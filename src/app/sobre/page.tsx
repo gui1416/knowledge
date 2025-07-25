@@ -6,7 +6,6 @@ import Link from "next/link"
 export default function AboutPage() {
  return (
   <div className="min-h-screen">
-   {/* Hero Section */}
    <section className="py-20 px-4 sm:px-6 lg:px-8 border-b">
     <div className="max-w-4xl mx-auto text-center">
      <h1 className="text-4xl font-bold mb-6">Sobre o Knowledge</h1>
@@ -17,7 +16,6 @@ export default function AboutPage() {
     </div>
    </section>
 
-   {/* Story Section */}
    <section className="py-20 px-4 sm:px-6 lg:px-8">
     <div className="max-w-4xl mx-auto">
      <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -29,7 +27,7 @@ export default function AboutPage() {
          tutoriais complexos e mal estruturados.
         </p>
         <p>
-         Em 2024, Guilherme decidiu criar uma plataforma diferente - uma que priorizasse a clareza, a
+         Em 2025s, Guilherme decidiu criar uma plataforma diferente - uma que priorizasse a clareza, a
          praticidade e, acima de tudo, a experiência do estudante iniciante.
         </p>
         <p>
@@ -67,7 +65,6 @@ export default function AboutPage() {
     </div>
    </section>
 
-   {/* Creator Section */}
    <section className="py-20 px-4 sm:px-6 lg:px-8 border-t">
     <div className="max-w-4xl mx-auto">
      <Card>

@@ -72,7 +72,6 @@ const faqs = [
 export default function HomePage() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-6">Easy Dev Tutorials</h1>
@@ -105,7 +104,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Technologies Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 border-t">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -144,7 +142,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 border-t">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
@@ -167,7 +164,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 border-t">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">Pronto para Começar?</h2>
