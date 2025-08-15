@@ -2,16 +2,22 @@
 
 import { SidebarTrigger } from "@/components/ui/sidebar"
 import { Separator } from "@/components/ui/separator"
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb"
+import { Breadcrumb as BreadcrumbContainer, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { usePathname } from "next/navigation"
+
+interface Breadcrumb {
+ name: string;
+ href: string;
+ isLast?: boolean;
+}
 
 export function Header() {
  const pathname = usePathname()
 
  const generateBreadcrumbs = () => {
   const segments = pathname.split('/').filter(Boolean)
-  const breadcrumbs = [{ name: 'Início', href: '/' }]
+  const breadcrumbs: Breadcrumb[] = [{ name: 'Início', href: '/' }]
 
   let currentPath = ''
   segments.forEach((segment, index) => {
@@ -33,7 +39,7 @@ export function Header() {
   <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4">
    <SidebarTrigger className="-ml-1" />
    <Separator orientation="vertical" className="mr-2 h-4" />
-   <Breadcrumb>
+   <BreadcrumbContainer>
     <BreadcrumbList>
      {breadcrumbs.map((crumb, index) => (
       <div key={crumb.href} className="flex items-center">
@@ -48,7 +54,7 @@ export function Header() {
       </div>
      ))}
     </BreadcrumbList>
-   </Breadcrumb>
+   </BreadcrumbContainer>
    <div className="ml-auto">
     <ThemeToggle />
    </div>
