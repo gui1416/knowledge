@@ -1,15 +1,13 @@
 "use client"
 
 import * as React from "react"
-import { BookOpen, Code2, FileText, Lightbulb, FolderOpen, Search, Home, ChevronRight, ChevronDown } from 'lucide-react'
+import { BookOpen, Code2, FileText, Search, Home, ChevronRight, ChevronDown, FolderOpen, Lightbulb } from "lucide-react"
 
 import {
  Sidebar,
  SidebarContent,
  SidebarFooter,
  SidebarGroup,
- SidebarGroupContent,
- SidebarGroupLabel,
  SidebarHeader,
  SidebarMenu,
  SidebarMenuButton,
@@ -39,8 +37,7 @@ const navigationData = [
     items: [
      { title: "Promises e Async/Await", url: "/estudos/javascript/promises" },
      { title: "Closures", url: "/estudos/javascript/closures" },
-     { title: "Event Loop", url: "/estudos/javascript/event-loop" },
-    ]
+    ],
    },
    {
     title: "React",
@@ -48,17 +45,13 @@ const navigationData = [
     items: [
      { title: "Hooks Avançados", url: "/estudos/react/hooks-avancados" },
      { title: "Context API", url: "/estudos/react/context-api" },
-     { title: "Performance", url: "/estudos/react/performance" },
-    ]
+     { title: "Callback vs Memo", url: "/estudos/react/callback-vs-memo" },
+    ],
    },
    {
     title: "Next.js",
     url: "/estudos/nextjs",
-    items: [
-     { title: "App Router", url: "/estudos/nextjs/app-router" },
-     { title: "Server Components", url: "/estudos/nextjs/server-components" },
-     { title: "Middleware", url: "/estudos/nextjs/middleware" },
-    ]
+    items: [{ title: "App Router", url: "/estudos/nextjs/app-router" }],
    },
   ],
  },
@@ -69,54 +62,114 @@ const navigationData = [
    {
     title: "Utilitários",
     url: "/snippets/utilitarios",
-    items: [
-     { title: "Debounce Hook", url: "/snippets/utilitarios/debounce-hook" },
-     { title: "Local Storage Hook", url: "/snippets/utilitarios/local-storage-hook" },
-     { title: "API Client", url: "/snippets/utilitarios/api-client" },
-    ]
+    items: [{ title: "Debounce Hook", url: "/snippets/utilitarios/debounce-hook" }],
    },
    {
     title: "Componentes",
     url: "/snippets/componentes",
     items: [
-     { title: "Modal Reutilizável", url: "/snippets/componentes/modal" },
-     { title: "Form Builder", url: "/snippets/componentes/form-builder" },
-     { title: "Data Table", url: "/snippets/componentes/data-table" },
-    ]
+     { title: "Button", url: "/snippets/componentes/button" },
+     { title: "Card", url: "/snippets/componentes/card" },
+     { title: "Dropdown", url: "/snippets/componentes/dropdown" },
+     { title: "Input", url: "/snippets/componentes/input" },
+     { title: "Modal", url: "/snippets/componentes/modal" },
+     { title: "Tabs", url: "/snippets/componentes/tabs" },
+    ],
    },
-  ],
- },
- {
-  title: "Artigos",
-  icon: FileText,
-  items: [
-   { title: "Arquitetura Frontend", url: "/artigos/arquitetura-frontend" },
-   { title: "Clean Code em React", url: "/artigos/clean-code-react" },
-   { title: "Performance Web", url: "/artigos/performance-web" },
-  ],
- },
- {
-  title: "Reflexões",
-  icon: Lightbulb,
-  items: [
-   { title: "Sobre Aprendizado", url: "/reflexoes/aprendizado" },
-   { title: "Carreira em Tech", url: "/reflexoes/carreira-tech" },
-   { title: "Produtividade", url: "/reflexoes/produtividade" },
+   {
+    title: "Hooks",
+    url: "/snippets/hooks",
+    items: [{ title: "useDebounce", url: "/snippets/hooks/use-debounce" }],
+   },
   ],
  },
  {
   title: "Projetos",
   icon: FolderOpen,
   items: [
-   { title: "E-commerce Platform", url: "/projetos/ecommerce-platform" },
-   { title: "Task Manager", url: "/projetos/task-manager" },
-   { title: "Blog Engine", url: "/projetos/blog-engine" },
+   {
+    title: "Visão Geral",
+    url: "/projetos",
+   },
+   {
+    title: "Concluídos",
+    items: [{ title: "Task Manager Pro", url: "/projetos/task-manager-pro" }],
+   },
+   {
+    title: "Em Andamento",
+    items: [{ title: "E-commerce Platform", url: "/projetos/ecommerce-platform" }],
+   },
+   {
+    title: "Pausados",
+    items: [{ title: "Analytics Dashboard", url: "/projetos/analytics-dashboard" }],
+   },
+   {
+    title: "Planejados",
+    items: [{ title: "AI Code Assistant", url: "/projetos/ai-code-assistant" }],
+   },
   ],
+ },
+ {
+  title: "Reflexões",
+  icon: Lightbulb,
+  items: [
+   {
+    title: "Todas as Reflexões",
+    url: "/reflexoes",
+   },
+   {
+    title: "Carreira",
+    items: [
+     { title: "Aprendizado Contínuo", url: "/reflexoes/aprendizado-continuo" },
+     { title: "Feedback Construtivo", url: "/reflexoes/feedback-construtivo" },
+    ],
+   },
+   {
+    title: "Bem-estar",
+    items: [{ title: "Equilibrando Vida e Código", url: "/reflexoes/equilibrio-vida-codigo" }],
+   },
+  ],
+ },
+ {
+  title: "Artigos",
+  icon: FileText,
+  items: [{ title: "Arquitetura Frontend Moderna", url: "/artigos/arquitetura-frontend-moderna" }],
  },
 ]
 
+async function getLatestCommitDate() {
+ try {
+  const response = await fetch("https://api.github.com/repos/gui1416/knowledge/commits?per_page=1", {
+   headers: {
+    Accept: "application/vnd.github.v3+json",
+   },
+   next: { revalidate: 86400 }, // Cache for 24 hour
+  })
+
+  if (!response.ok) {
+   throw new Error("Failed to fetch commit data")
+  }
+
+  const commits = await response.json()
+  if (commits && commits.length > 0) {
+   const commitDate = new Date(commits[0].commit.committer.date)
+   return commitDate.toLocaleDateString("pt-BR")
+  }
+ } catch (error) {
+  console.error("Error fetching latest commit date:", error)
+ }
+
+ // Fallback to current date if API fails
+ return new Date().toLocaleDateString("pt-BR")
+}
+
 export function AppSidebar() {
  const [searchOpen, setSearchOpen] = React.useState(false)
+ const [lastCommitDate, setLastCommitDate] = React.useState<string>("")
+
+ React.useEffect(() => {
+  getLatestCommitDate().then(setLastCommitDate)
+ }, [])
 
  return (
   <Sidebar variant="inset">
@@ -132,7 +185,7 @@ export function AppSidebar() {
     </div>
     <Button
      variant="outline"
-     className="w-full justify-start text-sm text-muted-foreground"
+     className="w-full justify-start text-sm text-muted-foreground bg-transparent"
      onClick={() => setSearchOpen(true)}
     >
      <Search className="mr-2 h-4 w-4" />
@@ -207,7 +260,7 @@ export function AppSidebar() {
    </SidebarContent>
    <SidebarFooter>
     <div className="p-2 text-xs text-muted-foreground">
-     Última atualização: {new Date().toLocaleDateString('pt-BR')}
+     Última atualização: {lastCommitDate || new Date().toLocaleDateString("pt-BR")}
     </div>
    </SidebarFooter>
    <SearchDialog open={searchOpen} onOpenChange={setSearchOpen} />

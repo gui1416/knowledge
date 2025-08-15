@@ -20,6 +20,10 @@ interface Token {
 export function CodeHighlighter({ code, language, filename }: CodeHighlighterProps) {
  const [copied, setCopied] = useState(false)
 
+ if (!code || typeof code !== "string") {
+  return null
+ }
+
  const copyToClipboard = async () => {
   await navigator.clipboard.writeText(code)
   setCopied(true)
@@ -27,6 +31,10 @@ export function CodeHighlighter({ code, language, filename }: CodeHighlighterPro
  }
 
  const tokenize = (code: string, lang?: string): Token[] => {
+  if (!code || code.length === 0) {
+   return []
+  }
+
   if (!lang || lang === "text") return [{ type: "text", value: code, start: 0, end: code.length }]
 
   const tokens: Token[] = []

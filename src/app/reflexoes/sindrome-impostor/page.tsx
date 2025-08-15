@@ -3,38 +3,38 @@ import { mdxComponents } from "@/components/mdx-components"
 const { Callout, CodeBlock, Dica } = mdxComponents
 
 export default function SindromeImpostorPage() {
- return (
-  <div className="container mx-auto px-4 sm:px-6 py-6 sm:py-8 max-w-4xl">
-   <article className="prose prose-slate dark:prose-invert max-w-none">
-    <h1>A Síndrome do Impostor no Desenvolvimento</h1>
+  return (
+    <div className="container mx-auto px-4 sm:px-6 py-6 sm:py-8 max-w-4xl">
+      <article className="prose prose-slate dark:prose-invert max-w-none">
+        <h1>A Síndrome do Impostor no Desenvolvimento</h1>
 
-    <p>
-     "Eu não sei o suficiente", "Qualquer hora vão descobrir que sou uma fraude",
-     "Todo mundo aqui é mais inteligente que eu". Se você já pensou isso,
-     você não está sozinho. A síndrome do impostor é mais comum na área de
-     tecnologia do que imaginamos.
-    </p>
+        <p>
+          "Eu não sei o suficiente", "Qualquer hora vão descobrir que sou uma fraude",
+          "Todo mundo aqui é mais inteligente que eu". Se você já pensou isso,
+          você não está sozinho. A síndrome do impostor é mais comum na área de
+          tecnologia do que imaginamos.
+        </p>
 
-    <Callout type="info" title="O que é a Síndrome do Impostor?">
-     É um padrão psicológico onde a pessoa duvida de suas conquistas e tem
-     medo persistente de ser "descoberta" como uma fraude, apesar de evidências
-     externas de sua competência.
-    </Callout>
+        <Callout type="info" title="O que é a Síndrome do Impostor?">
+          É um padrão psicológico onde a pessoa duvida de suas conquistas e tem
+          medo persistente de ser "descoberta" como uma fraude, apesar de evidências
+          externas de sua competência.
+        </Callout>
 
-    <h2>Por que é tão comum na programação?</h2>
+        <h2>Por que é tão comum na programação?</h2>
 
-    <p>
-     A área de tecnologia tem características únicas que alimentam esses sentimentos:
-    </p>
+        <p>
+          A área de tecnologia tem características únicas que alimentam esses sentimentos:
+        </p>
 
-    <h3>1. Evolução Constante</h3>
-    <p>
-     Novas tecnologias, frameworks e linguagens surgem constantemente.
-     É impossível saber tudo, mas isso pode gerar a sensação de estar sempre atrasado.
-    </p>
+        <h3>1. Evolução Constante</h3>
+        <p>
+          Novas tecnologias, frameworks e linguagens surgem constantemente.
+          É impossível saber tudo, mas isso pode gerar a sensação de estar sempre atrasado.
+        </p>
 
-    <CodeBlock language="javascript" filename="evolucao-constante.js">
-     {`// 2010: jQuery era o padrão
+        <CodeBlock language="javascript" filename="evolucao-constante.js">
+          {`// 2010: jQuery era o padrão
 $('#myElement').fadeIn();
 
 // 2013: Angular.js revolucionou SPAs
@@ -60,36 +60,36 @@ export async function getStaticProps() {
 
 // 2023: Server Components, Suspense, AI...
 // E a roda continua girando...`}
-    </CodeBlock>
+        </CodeBlock>
 
-    <h3>2. Cultura do "Rockstar Developer"</h3>
-    <p>
-     A glorificação de desenvolvedores "geniais" que criam projetos sozinhos
-     pode fazer outros se sentirem inadequados por precisarem de ajuda ou
-     tempo para aprender.
-    </p>
+        <h3>2. Cultura do "Rockstar Developer"</h3>
+        <p>
+          A glorificação de desenvolvedores "geniais" que criam projetos sozinhos
+          pode fazer outros se sentirem inadequados por precisarem de ajuda ou
+          tempo para aprender.
+        </p>
 
-    <h3>3. Síndrome do Stack Overflow</h3>
-    <p>
-     Copiar código do Stack Overflow é normal e necessário, mas pode gerar
-     culpa e sensação de não ser um "programador de verdade".
-    </p>
+        <h3>3. Síndrome do Stack Overflow</h3>
+        <p>
+          Copiar código do Stack Overflow é normal e necessário, mas pode gerar
+          culpa e sensação de não ser um "programador de verdade".
+        </p>
 
-    <Dica>
-     Lembre-se: até os desenvolvedores mais experientes consultam documentação
-     e Stack Overflow diariamente. Isso não é sinal de incompetência,
-     é sinal de pragmatismo.
-    </Dica>
+        <Dica>
+          Lembre-se: até os desenvolvedores mais experientes consultam documentação
+          e Stack Overflow diariamente. Isso não é sinal de incompetência,
+          é sinal de pragmatismo.
+        </Dica>
 
-    <h2>Os Tipos de Síndrome do Impostor</h2>
+        <h2>Os Tipos de Síndrome do Impostor</h2>
 
-    <h3>1. O Perfeccionista</h3>
-    <p>
-     "Meu código não está bom o suficiente. Preciso refatorar tudo antes de fazer commit."
-    </p>
+        <h3>1. O Perfeccionista</h3>
+        <p>
+          "Meu código não está bom o suficiente. Preciso refatorar tudo antes de fazer commit."
+        </p>
 
-    <CodeBlock language="typescript" filename="perfeccionista.ts">
-     {`// ❌ Perfeccionista paralisa por buscar o código "perfeito"
+        <CodeBlock language="typescript" filename="perfeccionista.ts">
+          {`// ❌ Perfeccionista paralisa por buscar o código "perfeito"
 function calculateUserScore(user: User): number {
   // Passa horas pensando na implementação "perfeita"
   // Nunca faz commit porque "pode melhorar"
@@ -114,51 +114,51 @@ function calculateUserScore(user: User): number {
 
 // Commit: "feat: add basic user score calculation"
 // Próximo PR: melhorias se necessário`}
-    </CodeBlock>
+        </CodeBlock>
 
-    <h3>2. O Especialista</h3>
-    <p>
-     "Não posso aplicar para essa vaga porque não sei 100% das tecnologias listadas."
-    </p>
+        <h3>2. O Especialista</h3>
+        <p>
+          "Não posso aplicar para essa vaga porque não sei 100% das tecnologias listadas."
+        </p>
 
-    <h3>3. O Gênio Natural</h3>
-    <p>
-     "Se eu fosse realmente bom, isso seria fácil para mim. Não deveria precisar estudar tanto."
-    </p>
+        <h3>3. O Gênio Natural</h3>
+        <p>
+          "Se eu fosse realmente bom, isso seria fácil para mim. Não deveria precisar estudar tanto."
+        </p>
 
-    <h3>4. O Individualista</h3>
-    <p>
-     "Pedir ajuda mostra que não sou capaz. Preciso resolver tudo sozinho."
-    </p>
+        <h3>4. O Individualista</h3>
+        <p>
+          "Pedir ajuda mostra que não sou capaz. Preciso resolver tudo sozinho."
+        </p>
 
-    <h3>5. O Super-herói</h3>
-    <p>
-     "Preciso ser o melhor em tudo e ajudar todo mundo, senão não sou valioso para a equipe."
-    </p>
+        <h3>5. O Super-herói</h3>
+        <p>
+          "Preciso ser o melhor em tudo e ajudar todo mundo, senão não sou valioso para a equipe."
+        </p>
 
-    <h2>Sinais de que você pode estar sofrendo</h2>
+        <h2>Sinais de que você pode estar sofrendo</h2>
 
-    <ul>
-     <li>Atribuir sucessos à sorte ou fatores externos</li>
-     <li>Medo excessivo de fazer perguntas</li>
-     <li>Procrastinação por medo de não fazer "perfeito"</li>
-     <li>Comparação constante com outros desenvolvedores</li>
-     <li>Sensação de que "qualquer hora vão me demitir"</li>
-     <li>Minimizar suas próprias conquistas</li>
-     <li>Trabalhar excessivamente para "compensar" a suposta incompetência</li>
-     <li>Evitar desafios por medo de falhar</li>
-    </ul>
+        <ul>
+          <li>Atribuir sucessos à sorte ou fatores externos</li>
+          <li>Medo excessivo de fazer perguntas</li>
+          <li>Procrastinação por medo de não fazer "perfeito"</li>
+          <li>Comparação constante com outros desenvolvedores</li>
+          <li>Sensação de que "qualquer hora vão me demitir"</li>
+          <li>Minimizar suas próprias conquistas</li>
+          <li>Trabalhar excessivamente para "compensar" a suposta incompetência</li>
+          <li>Evitar desafios por medo de falhar</li>
+        </ul>
 
-    <h2>Como transformar a síndrome em motivação</h2>
+        <h2>Como transformar a síndrome em motivação</h2>
 
-    <h3>1. Reframe sua perspectiva</h3>
+        <h3>1. Reframe sua perspectiva</h3>
 
-    <p>
-     Em vez de ver o não-saber como falha, veja como oportunidade de crescimento.
-    </p>
+        <p>
+          Em vez de ver o não-saber como falha, veja como oportunidade de crescimento.
+        </p>
 
-    <CodeBlock language="typescript" filename="reframe-perspectiva.ts">
-     {`// ❌ Pensamento de impostor
+        <CodeBlock language="typescript" filename="reframe-perspectiva.ts">
+          {`// ❌ Pensamento de impostor
 "Não sei React Hooks, sou um desenvolvedor ruim"
 
 // ✅ Pensamento de crescimento
@@ -201,17 +201,17 @@ const myLearningJourney: LearningLog[] = [
     howIApplied: "Redesigned dashboard layout"
   }
 ];`}
-    </CodeBlock>
+        </CodeBlock>
 
-    <h3>2. Documente sua jornada</h3>
+        <h3>2. Documente sua jornada</h3>
 
-    <p>
-     Manter um registro do que você aprende ajuda a visualizar seu progresso
-     e combater a sensação de que "não sabe nada".
-    </p>
+        <p>
+          Manter um registro do que você aprende ajuda a visualizar seu progresso
+          e combater a sensação de que "não sabe nada".
+        </p>
 
-    <CodeBlock language="markdown" filename="learning-journal.md">
-     {`# Meu Diário de Aprendizado
+        <CodeBlock language="markdown" filename="learning-journal.md">
+          {`# Meu Diário de Aprendizado
 
 ## Semana 1 - Janeiro 2024
 
@@ -238,16 +238,16 @@ const myLearningJourney: LearningLog[] = [
 - ✅ Ajudei colega com problema de CSS
 - ✅ Fiz code review construtivo
 - ✅ Aprendi 3 conceitos novos`}
-    </CodeBlock>
+        </CodeBlock>
 
-    <h3>3. Pratique a vulnerabilidade intelectual</h3>
+        <h3>3. Pratique a vulnerabilidade intelectual</h3>
 
-    <p>
-     Admitir que não sabe algo não é fraqueza, é honestidade e abertura para aprender.
-    </p>
+        <p>
+          Admitir que não sabe algo não é fraqueza, é honestidade e abertura para aprender.
+        </p>
 
-    <CodeBlock language="typescript" filename="vulnerabilidade-intelectual.ts">
-     {`// ❌ Fingir que sabe
+        <CodeBlock language="typescript" filename="vulnerabilidade-intelectual.ts">
+          {`// ❌ Fingir que sabe
 function handleComplexLogic(data: any) {
   // Implementa algo que não entende completamente
   // Código funciona por acaso
@@ -302,34 +302,34 @@ Wiki entry: "Quando usar algoritmos de ordenação customizados vs nativos"
 - Implementações próprias só valem para casos muito específicos  
 - Benchmark sempre antes de otimizar
 */`}
-    </CodeBlock>
+        </CodeBlock>
 
-    <h3>4. Celebre pequenas vitórias</h3>
+        <h3>4. Celebre pequenas vitórias</h3>
 
-    <p>
-     Reconheça e comemore seus progressos, por menores que pareçam.
-    </p>
+        <p>
+          Reconheça e comemore seus progressos, por menores que pareçam.
+        </p>
 
-    <Callout type="success" title="Vitórias que merecem celebração">
-     <ul>
-      <li>Resolveu um bug que estava te incomodando há dias</li>
-      <li>Fez uma pergunta inteligente em uma reunião</li>
-      <li>Ajudou um colega com um problema</li>
-      <li>Aprendeu um conceito novo, mesmo que básico</li>
-      <li>Escreveu código que funcionou na primeira tentativa</li>
-      <li>Recebeu feedback positivo em um code review</li>
-     </ul>
-    </Callout>
+        <Callout type="success" title="Vitórias que merecem celebração">
+          <ul>
+            <li>Resolveu um bug que estava te incomodando há dias</li>
+            <li>Fez uma pergunta inteligente em uma reunião</li>
+            <li>Ajudou um colega com um problema</li>
+            <li>Aprendeu um conceito novo, mesmo que básico</li>
+            <li>Escreveu código que funcionou na primeira tentativa</li>
+            <li>Recebeu feedback positivo em um code review</li>
+          </ul>
+        </Callout>
 
-    <h3>5. Encontre sua comunidade</h3>
+        <h3>5. Encontre sua comunidade</h3>
 
-    <p>
-     Conecte-se com outros desenvolvedores que passam pelos mesmos desafios.
-     Você descobrirá que não está sozinho.
-    </p>
+        <p>
+          Conecte-se com outros desenvolvedores que passam pelos mesmos desafios.
+          Você descobrirá que não está sozinho.
+        </p>
 
-    <CodeBlock language="typescript" filename="comunidade-apoio.ts">
-     {`// Lugares para encontrar apoio e aprendizado
+        <CodeBlock language="typescript" filename="comunidade-apoio.ts">
+          {`// Lugares para encontrar apoio e aprendizado
 const communities = {
   online: [
     'Discord servers (Rocketseat, He4rt, etc)',
@@ -380,22 +380,22 @@ const waysToContribute = {
     'Criar cursos ou conteúdo educativo'
   ]
 };`}
-    </CodeBlock>
+        </CodeBlock>
 
-    <h2>Estratégias práticas para o dia a dia</h2>
+        <h2>Estratégias práticas para o dia a dia</h2>
 
-    <h3>1. A regra dos 20 minutos</h3>
+        <h3>1. A regra dos 20 minutos</h3>
 
-    <p>
-     Quando estiver travado em um problema, tente por 20 minutos.
-     Se não conseguir, peça ajuda. Isso evita frustração desnecessária
-     e mostra que você tentou antes de pedir ajuda.
-    </p>
+        <p>
+          Quando estiver travado em um problema, tente por 20 minutos.
+          Se não conseguir, peça ajuda. Isso evita frustração desnecessária
+          e mostra que você tentou antes de pedir ajuda.
+        </p>
 
-    <h3>2. Mantenha uma "brag list"</h3>
+        <h3>2. Mantenha uma "brag list"</h3>
 
-    <CodeBlock language="markdown" filename="brag-list.md">
-     {`# Minhas Conquistas Profissionais
+        <CodeBlock language="markdown" filename="brag-list.md">
+          {`# Minhas Conquistas Profissionais
 
 ## 2024
 
@@ -422,17 +422,17 @@ const waysToContribute = {
 - Testing: aprendi Jest e Testing Library
 - Performance: entendo melhor otimizações React
 - Communication: melhorei explicações técnicas`}
-    </CodeBlock>
+        </CodeBlock>
 
-    <h3>3. Pratique o "teaching effect"</h3>
+        <h3>3. Pratique o "teaching effect"</h3>
 
-    <p>
-     Ensinar outros é uma das melhores formas de consolidar conhecimento
-     e perceber o quanto você realmente sabe.
-    </p>
+        <p>
+          Ensinar outros é uma das melhores formas de consolidar conhecimento
+          e perceber o quanto você realmente sabe.
+        </p>
 
-    <CodeBlock language="typescript" filename="teaching-effect.ts">
-     {`// Exemplo: explicando conceitos para consolidar aprendizado
+        <CodeBlock language="typescript" filename="teaching-effect.ts">
+          {`// Exemplo: explicando conceitos para consolidar aprendizado
 
 /**
  * Explicando closures para um colega (e para mim mesmo)
@@ -484,62 +484,62 @@ console.log(contador.valor()); // 11
  * - Consigo explicar com exemplos práticos
  * - Ajudar outros me fez sentir mais confiante
  */`}
-    </CodeBlock>
+        </CodeBlock>
 
-    <h3>4. Redefina "ser bom em programação"</h3>
+        <h3>4. Redefina "ser bom em programação"</h3>
 
-    <p>
-     Ser um bom desenvolvedor não é sobre saber tudo, mas sobre:
-    </p>
+        <p>
+          Ser um bom desenvolvedor não é sobre saber tudo, mas sobre:
+        </p>
 
-    <ul>
-     <li><strong>Resolver problemas</strong> - não necessariamente de forma elegante na primeira tentativa</li>
-     <li><strong>Aprender continuamente</strong> - estar sempre disposto a crescer</li>
-     <li><strong>Colaborar bem</strong> - trabalhar efetivamente em equipe</li>
-     <li><strong>Comunicar claramente</strong> - explicar problemas e soluções</li>
-     <li><strong>Ser pragmático</strong> - escolher soluções que funcionam</li>
-     <li><strong>Ter empatia</strong> - com usuários e colegas de trabalho</li>
-    </ul>
+        <ul>
+          <li><strong>Resolver problemas</strong> - não necessariamente de forma elegante na primeira tentativa</li>
+          <li><strong>Aprender continuamente</strong> - estar sempre disposto a crescer</li>
+          <li><strong>Colaborar bem</strong> - trabalhar efetivamente em equipe</li>
+          <li><strong>Comunicar claramente</strong> - explicar problemas e soluções</li>
+          <li><strong>Ser pragmático</strong> - escolher soluções que funcionam</li>
+          <li><strong>Ter empatia</strong> - com usuários e colegas de trabalho</li>
+        </ul>
 
-    <h2>Quando buscar ajuda profissional</h2>
+        <h2>Quando buscar ajuda profissional</h2>
 
-    <p>
-     Se a síndrome do impostor está afetando significativamente sua vida
-     profissional ou pessoal, considere buscar ajuda de um psicólogo.
-     Sinais de alerta incluem:
-    </p>
+        <p>
+          Se a síndrome do impostor está afetando significativamente sua vida
+          profissional ou pessoal, considere buscar ajuda de um psicólogo.
+          Sinais de alerta incluem:
+        </p>
 
-    <ul>
-     <li>Ansiedade constante relacionada ao trabalho</li>
-     <li>Evitar oportunidades por medo</li>
-     <li>Insônia ou problemas de saúde relacionados ao estresse</li>
-     <li>Isolamento social ou profissional</li>
-     <li>Pensamentos autodepreciativos constantes</li>
-    </ul>
+        <ul>
+          <li>Ansiedade constante relacionada ao trabalho</li>
+          <li>Evitar oportunidades por medo</li>
+          <li>Insônia ou problemas de saúde relacionados ao estresse</li>
+          <li>Isolamento social ou profissional</li>
+          <li>Pensamentos autodepreciativos constantes</li>
+        </ul>
 
-    <Callout type="warning" title="Lembre-se">
-     Buscar ajuda profissional não é sinal de fraqueza. É um investimento
-     em sua saúde mental e carreira. Muitos desenvolvedores bem-sucedidos
-     fazem terapia regularmente.
-    </Callout>
+        <Callout type="warning" title="Lembre-se">
+          Buscar ajuda profissional não é sinal de fraqueza. É um investimento
+          em sua saúde mental e carreira. Muitos desenvolvedores bem-sucedidos
+          fazem terapia regularmente.
+        </Callout>
 
-    <h2>Mensagem final</h2>
+        <h2>Mensagem final</h2>
 
-    <p>
-     A síndrome do impostor é real e comum, mas não precisa definir sua carreira.
-     Lembre-se de que:
-    </p>
+        <p>
+          A síndrome do impostor é real e comum, mas não precisa definir sua carreira.
+          Lembre-se de que:
+        </p>
 
-    <ul>
-     <li>Todo mundo começou do zero um dia</li>
-     <li>Não saber algo não te torna menos capaz</li>
-     <li>Seus colegas também têm dúvidas e inseguranças</li>
-     <li>Você foi contratado por uma razão</li>
-     <li>Crescimento é um processo, não um destino</li>
-    </ul>
+        <ul>
+          <li>Todo mundo começou do zero um dia</li>
+          <li>Não saber algo não te torna menos capaz</li>
+          <li>Seus colegas também têm dúvidas e inseguranças</li>
+          <li>Você foi contratado por uma razão</li>
+          <li>Crescimento é um processo, não um destino</li>
+        </ul>
 
-    <CodeBlock language="typescript" filename="mensagem-final.ts">
-     {`// Uma reflexão pessoal
+        <CodeBlock language="typescript" filename="mensagem-final.ts">
+          {`// Uma reflexão pessoal
 const myJourney = {
   start: "Achava que nunca seria um 'programador de verdade'",
   middle: "Percebi que todo mundo está aprendendo sempre",
@@ -557,21 +557,21 @@ const reminder = {
 };
 
 console.log("Você chegou até aqui. Isso já é uma conquista! 🚀");`}
-    </CodeBlock>
+        </CodeBlock>
 
-    <Callout type="success" title="Você não está sozinho">
-     Se este artigo ressoou com você, saiba que milhares de desenvolvedores
-     passam pelos mesmos sentimentos. A diferença entre quem cresce e quem
-     estagnou não é a ausência de dúvidas, mas a coragem de continuar
-     apesar delas.
-    </Callout>
+        <Callout type="success" title="Você não está sozinho">
+          Se este artigo ressoou com você, saiba que milhares de desenvolvedores
+          passam pelos mesmos sentimentos. A diferença entre quem cresce e quem
+          estagnou não é a ausência de dúvidas, mas a coragem de continuar
+          apesar delas.
+        </Callout>
 
-    <p>
-     <em>
-      "O expert em qualquer coisa já foi um iniciante." - Helen Hayes
-     </em>
-    </p>
-   </article>
-  </div>
- )
+        <p>
+          <em>
+            "O expert em qualquer coisa já foi um iniciante." - Helen Hayes
+          </em>
+        </p>
+      </article>
+    </div>
+  )
 }
