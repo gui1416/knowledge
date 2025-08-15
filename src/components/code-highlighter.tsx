@@ -39,32 +39,23 @@ export function CodeHighlighter({ code, language, filename }: CodeHighlighterPro
 
   const tokens: Token[] = []
   const patterns = [
-   // Comentários (deve vir primeiro)
    { type: "comment", regex: /\/\/.*$/gm },
    { type: "comment", regex: /\/\*[\s\S]*?\*\//g },
-   // Strings (deve vir antes de outras patterns)
    { type: "string", regex: /"(?:[^"\\]|\\.)*"/g },
    { type: "string", regex: /'(?:[^'\\]|\\.)*'/g },
    { type: "string", regex: /`(?:[^`\\]|\\.)*`/g },
-   // Keywords
    {
     type: "keyword",
     regex:
      /\b(?:const|let|var|function|return|if|else|for|while|class|interface|type|import|export|from|default|async|await|try|catch|finally|throw|new|this|super|extends|implements|public|private|protected|static|readonly|abstract|enum|namespace|module|declare|as|in|of|typeof|instanceof|void|null|undefined|true|false)\b/g,
    },
-   // Números
    { type: "number", regex: /\b\d+(?:\.\d+)?\b/g },
-   // Tags JSX/HTML
    { type: "tag", regex: /<\/?[a-zA-Z][a-zA-Z0-9]*(?:\s[^>]*)?\/?>/g },
-   // Propriedades JSX
    { type: "attr", regex: /\b[a-zA-Z-]+(?==)/g },
-   // Operadores
    { type: "operator", regex: /[+\-*/%=<>!&|^~?:]/g },
-   // Pontuação
    { type: "punctuation", regex: /[{}[\]();,.]/g },
   ]
 
-  // Encontrar todas as matches
   const allMatches: Array<{ type: string; match: RegExpMatchArray }> = []
 
   patterns.forEach((pattern) => {
@@ -74,10 +65,8 @@ export function CodeHighlighter({ code, language, filename }: CodeHighlighterPro
    }
   })
 
-  // Ordenar por posição
   allMatches.sort((a, b) => a.match.index! - b.match.index!)
 
-  // Resolver conflitos (primeiro match ganha)
   const resolvedTokens: Token[] = []
   let lastEnd = 0
 
@@ -85,9 +74,7 @@ export function CodeHighlighter({ code, language, filename }: CodeHighlighterPro
    const start = match.index!
    const end = start + match[0].length
 
-   // Se não há sobreposição com tokens anteriores
    if (start >= lastEnd) {
-    // Adicionar texto normal antes do token, se houver
     if (start > lastEnd) {
      resolvedTokens.push({
       type: "text",
@@ -97,7 +84,6 @@ export function CodeHighlighter({ code, language, filename }: CodeHighlighterPro
      })
     }
 
-    // Adicionar o token
     resolvedTokens.push({
      type,
      value: match[0],
@@ -109,7 +95,6 @@ export function CodeHighlighter({ code, language, filename }: CodeHighlighterPro
    }
   })
 
-  // Adicionar texto restante
   if (lastEnd < code.length) {
    resolvedTokens.push({
     type: "text",

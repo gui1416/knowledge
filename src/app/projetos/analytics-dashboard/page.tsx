@@ -8,7 +8,7 @@ import { ComponentPreview } from "@/components/mdx-components"
 export default function AnalyticsDashboardPage() {
  return (
   <div className="container mx-auto px-6 py-8 max-w-4xl">
-   {/* Header */}
+
    <div className="mb-8">
     <Button variant="ghost" size="sm" asChild className="mb-4">
      <Link href="/projetos">
@@ -33,7 +33,6 @@ export default function AnalyticsDashboardPage() {
     </p>
    </div>
 
-   {/* Status Alert */}
    <Card className="mb-8 border-orange-200 bg-orange-50 dark:border-orange-800 dark:bg-orange-950">
     <CardContent className="p-4">
      <div className="flex items-center gap-2">
@@ -49,7 +48,6 @@ export default function AnalyticsDashboardPage() {
     </CardContent>
    </Card>
 
-   {/* Progress */}
    <Card className="mb-8">
     <CardHeader>
      <CardTitle>Progresso Atual</CardTitle>
@@ -87,7 +85,6 @@ export default function AnalyticsDashboardPage() {
     </CardContent>
    </Card>
 
-   {/* Tech Stack */}
    <section className="mb-8">
     <h2 className="text-2xl font-semibold mb-4">Tecnologias Utilizadas</h2>
     <div className="flex flex-wrap gap-2">
@@ -99,7 +96,6 @@ export default function AnalyticsDashboardPage() {
     </div>
    </section>
 
-   {/* Current State Demo */}
    <section className="mb-8">
     <h2 className="text-2xl font-semibold mb-4">Estado Atual do Dashboard</h2>
     <ComponentPreview>
@@ -107,7 +103,6 @@ export default function AnalyticsDashboardPage() {
     </ComponentPreview>
    </section>
 
-   {/* Challenges */}
    <section className="mb-8">
     <h2 className="text-2xl font-semibold mb-4">Desafios Encontrados</h2>
     <div className="space-y-4">
@@ -137,7 +132,6 @@ export default function AnalyticsDashboardPage() {
     </div>
    </section>
 
-   {/* Future Plans */}
    <section className="mb-8">
     <h2 className="text-2xl font-semibold mb-4">Planos para Retomada</h2>
     <div className="space-y-3">
@@ -162,7 +156,6 @@ export default function AnalyticsDashboardPage() {
     </div>
    </section>
 
-   {/* Links */}
    <div className="flex gap-4">
     <Button asChild>
      <Link href="https://github.com/user/analytics-dashboard" target="_blank">
@@ -178,7 +171,6 @@ export default function AnalyticsDashboardPage() {
  )
 }
 
-// Demo Component
 function AnalyticsDemo() {
  return (
   <div className="bg-white dark:bg-gray-900 rounded-lg border p-4 max-w-lg mx-auto">

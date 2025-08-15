@@ -3,49 +3,49 @@
 import { ComponentPreview, CodeBlock, Callout, Dica } from '@/components/mdx-components'
 import { Button } from '@/components/ui/button'
 import {
- DropdownMenu,
- DropdownMenuContent,
- DropdownMenuItem,
- DropdownMenuLabel,
- DropdownMenuSeparator,
- DropdownMenuTrigger,
- DropdownMenuCheckboxItem,
- DropdownMenuRadioGroup,
- DropdownMenuRadioItem,
- DropdownMenuSub,
- DropdownMenuSubContent,
- DropdownMenuSubTrigger,
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+  DropdownMenuCheckboxItem,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
 } from '@/components/ui/dropdown-menu'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { MoreHorizontal, User, Settings, LogOut, Plus, Edit, Trash2, Copy, ChevronDown, Check, Filter, SortAsc, SortDesc, Eye, EyeOff } from 'lucide-react'
+import { User, Settings, LogOut, Plus, Edit, Trash2, Copy, ChevronDown, Filter, Eye, EyeOff } from 'lucide-react'
 import { useState } from 'react'
 
 export default function DropdownPage() {
- const [showBookmarks, setShowBookmarks] = useState(true)
- const [showReading, setShowReading] = useState(false)
- const [position, setPosition] = useState('bottom')
+  const [showBookmarks, setShowBookmarks] = useState(true)
+  const [showReading, setShowReading] = useState(false)
+  const [position, setPosition] = useState('bottom')
 
- return (
-  <div className="container mx-auto px-4 py-8 max-w-4xl">
-   <div className="mb-8">
-    <h1 className="text-3xl font-bold mb-4">Dropdown Menu</h1>
-    <p className="text-muted-foreground text-lg">
-     Menu suspenso versátil para ações contextuais, navegação e seleções.
-     Construído com Radix UI para máxima acessibilidade.
-    </p>
-   </div>
+  return (
+    <div className="container mx-auto px-4 py-8 max-w-4xl">
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold mb-4">Dropdown Menu</h1>
+        <p className="text-muted-foreground text-lg">
+          Menu suspenso versátil para ações contextuais, navegação e seleções.
+          Construído com Radix UI para máxima acessibilidade.
+        </p>
+      </div>
 
-   <Callout type="info" title="Acessibilidade Completa">
-    O DropdownMenu inclui navegação por teclado, foco automático, escape para fechar
-    e suporte completo a screen readers seguindo as diretrizes ARIA.
-   </Callout>
+      <Callout type="info" title="Acessibilidade Completa">
+        O DropdownMenu inclui navegação por teclado, foco automático, escape para fechar
+        e suporte completo a screen readers seguindo as diretrizes ARIA.
+      </Callout>
 
-   <h2 className="text-2xl font-semibold mb-6 mt-8">Menu Básico</h2>
+      <h2 className="text-2xl font-semibold mb-6 mt-8">Menu Básico</h2>
 
-   <ComponentPreview
-    title="Dropdown Simples"
-    description="Menu básico com itens de ação"
-    code={`function SimpleDropdown() {
+      <ComponentPreview
+        title="Dropdown Simples"
+        description="Menu básico com itens de ação"
+        code={`function SimpleDropdown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -74,40 +74,40 @@ export default function DropdownPage() {
     </DropdownMenu>
   )
 }`}
-   >
-    <DropdownMenu>
-     <DropdownMenuTrigger asChild>
-      <Button variant="outline">
-       Opções
-       <ChevronDown className="ml-2 h-4 w-4" />
-      </Button>
-     </DropdownMenuTrigger>
-     <DropdownMenuContent>
-      <DropdownMenuLabel>Ações</DropdownMenuLabel>
-      <DropdownMenuSeparator />
-      <DropdownMenuItem>
-       <Edit className="mr-2 h-4 w-4" />
-       Editar
-      </DropdownMenuItem>
-      <DropdownMenuItem>
-       <Copy className="mr-2 h-4 w-4" />
-       Duplicar
-      </DropdownMenuItem>
-      <DropdownMenuSeparator />
-      <DropdownMenuItem className="text-red-600">
-       <Trash2 className="mr-2 h-4 w-4" />
-       Deletar
-      </DropdownMenuItem>
-     </DropdownMenuContent>
-    </DropdownMenu>
-   </ComponentPreview>
+      >
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="outline">
+              Opções
+              <ChevronDown className="ml-2 h-4 w-4" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuLabel>Ações</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>
+              <Edit className="mr-2 h-4 w-4" />
+              Editar
+            </DropdownMenuItem>
+            <DropdownMenuItem>
+              <Copy className="mr-2 h-4 w-4" />
+              Duplicar
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem className="text-red-600">
+              <Trash2 className="mr-2 h-4 w-4" />
+              Deletar
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </ComponentPreview>
 
-   <h2 className="text-2xl font-semibold mb-6 mt-8">Menu de Usuário</h2>
+      <h2 className="text-2xl font-semibold mb-6 mt-8">Menu de Usuário</h2>
 
-   <ComponentPreview
-    title="User Menu"
-    description="Menu de usuário com avatar e perfil"
-    code={`function UserMenu() {
+      <ComponentPreview
+        title="User Menu"
+        description="Menu de usuário com avatar e perfil"
+        code={`function UserMenu() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -145,49 +145,49 @@ export default function DropdownPage() {
     </DropdownMenu>
   )
 }`}
-   >
-    <DropdownMenu>
-     <DropdownMenuTrigger asChild>
-      <Button variant="ghost" className="relative h-8 w-8 rounded-full">
-       <Avatar className="h-8 w-8">
-        <AvatarImage src="/placeholder.svg?height=32&width=32&text=U" />
-        <AvatarFallback>JD</AvatarFallback>
-       </Avatar>
-      </Button>
-     </DropdownMenuTrigger>
-     <DropdownMenuContent className="w-56" align="end" forceMount>
-      <DropdownMenuLabel className="font-normal">
-       <div className="flex flex-col space-y-1">
-        <p className="text-sm font-medium leading-none">João Silva</p>
-        <p className="text-xs leading-none text-muted-foreground">
-         joao@exemplo.com
-        </p>
-       </div>
-      </DropdownMenuLabel>
-      <DropdownMenuSeparator />
-      <DropdownMenuItem>
-       <User className="mr-2 h-4 w-4" />
-       Perfil
-      </DropdownMenuItem>
-      <DropdownMenuItem>
-       <Settings className="mr-2 h-4 w-4" />
-       Configurações
-      </DropdownMenuItem>
-      <DropdownMenuSeparator />
-      <DropdownMenuItem>
-       <LogOut className="mr-2 h-4 w-4" />
-       Sair
-      </DropdownMenuItem>
-     </DropdownMenuContent>
-    </DropdownMenu>
-   </ComponentPreview>
+      >
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="ghost" className="relative h-8 w-8 rounded-full">
+              <Avatar className="h-8 w-8">
+                <AvatarImage src="/placeholder.svg?height=32&width=32&text=U" />
+                <AvatarFallback>JD</AvatarFallback>
+              </Avatar>
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="w-56" align="end" forceMount>
+            <DropdownMenuLabel className="font-normal">
+              <div className="flex flex-col space-y-1">
+                <p className="text-sm font-medium leading-none">João Silva</p>
+                <p className="text-xs leading-none text-muted-foreground">
+                  joao@exemplo.com
+                </p>
+              </div>
+            </DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>
+              <User className="mr-2 h-4 w-4" />
+              Perfil
+            </DropdownMenuItem>
+            <DropdownMenuItem>
+              <Settings className="mr-2 h-4 w-4" />
+              Configurações
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>
+              <LogOut className="mr-2 h-4 w-4" />
+              Sair
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </ComponentPreview>
 
-   <h2 className="text-2xl font-semibold mb-6 mt-8">Menu com Checkboxes</h2>
+      <h2 className="text-2xl font-semibold mb-6 mt-8">Menu com Checkboxes</h2>
 
-   <ComponentPreview
-    title="Checkbox Items"
-    description="Menu com itens selecionáveis usando checkboxes"
-    code={`function CheckboxDropdown() {
+      <ComponentPreview
+        title="Checkbox Items"
+        description="Menu com itens selecionáveis usando checkboxes"
+        code={`function CheckboxDropdown() {
   const [showBookmarks, setShowBookmarks] = useState(true)
   const [showReading, setShowReading] = useState(false)
 
@@ -218,37 +218,37 @@ export default function DropdownPage() {
     </DropdownMenu>
   )
 }`}
-   >
-    <DropdownMenu>
-     <DropdownMenuTrigger asChild>
-      <Button variant="outline">
-       <Filter className="mr-2 h-4 w-4" />
-       Filtros
-      </Button>
-     </DropdownMenuTrigger>
-     <DropdownMenuContent className="w-56">
-      <DropdownMenuLabel>Mostrar</DropdownMenuLabel>
-      <DropdownMenuSeparator />
-      <DropdownMenuCheckboxItem
-       checked={showBookmarks}
-       onCheckedChange={setShowBookmarks}
       >
-       Favoritos
-      </DropdownMenuCheckboxItem>
-      <DropdownMenuCheckboxItem
-       checked={showReading}
-       onCheckedChange={setShowReading}
-      >
-       Lista de Leitura
-      </DropdownMenuCheckboxItem>
-     </DropdownMenuContent>
-    </DropdownMenu>
-   </ComponentPreview>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="outline">
+              <Filter className="mr-2 h-4 w-4" />
+              Filtros
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="w-56">
+            <DropdownMenuLabel>Mostrar</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuCheckboxItem
+              checked={showBookmarks}
+              onCheckedChange={setShowBookmarks}
+            >
+              Favoritos
+            </DropdownMenuCheckboxItem>
+            <DropdownMenuCheckboxItem
+              checked={showReading}
+              onCheckedChange={setShowReading}
+            >
+              Lista de Leitura
+            </DropdownMenuCheckboxItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </ComponentPreview>
 
-   <ComponentPreview
-    title="Radio Group"
-    description="Menu com seleção única usando radio buttons"
-    code={`function RadioDropdown() {
+      <ComponentPreview
+        title="Radio Group"
+        description="Menu com seleção única usando radio buttons"
+        code={`function RadioDropdown() {
   const [position, setPosition] = useState('bottom')
 
   return (
@@ -271,32 +271,32 @@ export default function DropdownPage() {
     </DropdownMenu>
   )
 }`}
-   >
-    <DropdownMenu>
-     <DropdownMenuTrigger asChild>
-      <Button variant="outline">
-       Posição: {position}
-       <ChevronDown className="ml-2 h-4 w-4" />
-      </Button>
-     </DropdownMenuTrigger>
-     <DropdownMenuContent className="w-56">
-      <DropdownMenuLabel>Posição do Painel</DropdownMenuLabel>
-      <DropdownMenuSeparator />
-      <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
-       <DropdownMenuRadioItem value="top">Topo</DropdownMenuRadioItem>
-       <DropdownMenuRadioItem value="bottom">Inferior</DropdownMenuRadioItem>
-       <DropdownMenuRadioItem value="right">Direita</DropdownMenuRadioItem>
-      </DropdownMenuRadioGroup>
-     </DropdownMenuContent>
-    </DropdownMenu>
-   </ComponentPreview>
+      >
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="outline">
+              Posição: {position}
+              <ChevronDown className="ml-2 h-4 w-4" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="w-56">
+            <DropdownMenuLabel>Posição do Painel</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
+              <DropdownMenuRadioItem value="top">Topo</DropdownMenuRadioItem>
+              <DropdownMenuRadioItem value="bottom">Inferior</DropdownMenuRadioItem>
+              <DropdownMenuRadioItem value="right">Direita</DropdownMenuRadioItem>
+            </DropdownMenuRadioGroup>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </ComponentPreview>
 
-   <h2 className="text-2xl font-semibold mb-6 mt-8">Submenu</h2>
+      <h2 className="text-2xl font-semibold mb-6 mt-8">Submenu</h2>
 
-   <ComponentPreview
-    title="Menu com Submenu"
-    description="Menu aninhado com submenus"
-    code={`function SubmenuDropdown() {
+      <ComponentPreview
+        title="Menu com Submenu"
+        description="Menu aninhado com submenus"
+        code={`function SubmenuDropdown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -337,50 +337,50 @@ export default function DropdownPage() {
     </DropdownMenu>
   )
 }`}
-   >
-    <DropdownMenu>
-     <DropdownMenuTrigger asChild>
-      <Button variant="outline">
-       <Plus className="mr-2 h-4 w-4" />
-       Criar
-      </Button>
-     </DropdownMenuTrigger>
-     <DropdownMenuContent className="w-56">
-      <DropdownMenuLabel>Criar Novo</DropdownMenuLabel>
-      <DropdownMenuSeparator />
-      <DropdownMenuItem>
-       <User className="mr-2 h-4 w-4" />
-       Usuário
-      </DropdownMenuItem>
-      <DropdownMenuSub>
-       <DropdownMenuSubTrigger>
-        <Settings className="mr-2 h-4 w-4" />
-        Configurações
-       </DropdownMenuSubTrigger>
-       <DropdownMenuSubContent>
-        <DropdownMenuItem>
-         <Eye className="mr-2 h-4 w-4" />
-         Visibilidade
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-         <EyeOff className="mr-2 h-4 w-4" />
-         Privacidade
-        </DropdownMenuItem>
-       </DropdownMenuSubContent>
-      </DropdownMenuSub>
-      <DropdownMenuSeparator />
-      <DropdownMenuItem>
-       <Trash2 className="mr-2 h-4 w-4" />
-       Lixeira
-      </DropdownMenuItem>
-     </DropdownMenuContent>
-    </DropdownMenu>
-   </ComponentPreview>
+      >
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="outline">
+              <Plus className="mr-2 h-4 w-4" />
+              Criar
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="w-56">
+            <DropdownMenuLabel>Criar Novo</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>
+              <User className="mr-2 h-4 w-4" />
+              Usuário
+            </DropdownMenuItem>
+            <DropdownMenuSub>
+              <DropdownMenuSubTrigger>
+                <Settings className="mr-2 h-4 w-4" />
+                Configurações
+              </DropdownMenuSubTrigger>
+              <DropdownMenuSubContent>
+                <DropdownMenuItem>
+                  <Eye className="mr-2 h-4 w-4" />
+                  Visibilidade
+                </DropdownMenuItem>
+                <DropdownMenuItem>
+                  <EyeOff className="mr-2 h-4 w-4" />
+                  Privacidade
+                </DropdownMenuItem>
+              </DropdownMenuSubContent>
+            </DropdownMenuSub>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>
+              <Trash2 className="mr-2 h-4 w-4" />
+              Lixeira
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </ComponentPreview>
 
-   <h2 className="text-2xl font-semibold mb-6 mt-8">Implementação</h2>
+      <h2 className="text-2xl font-semibold mb-6 mt-8">Implementação</h2>
 
-   <CodeBlock language="tsx" filename="components/ui/dropdown-menu.tsx">
-    {`"use client"
+      <CodeBlock language="tsx" filename="components/ui/dropdown-menu.tsx">
+        {`"use client"
 
 import * as React from "react"
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu"
@@ -557,38 +557,38 @@ export {
   DropdownMenuSubTrigger,
   DropdownMenuRadioGroup,
 }`}
-   </CodeBlock>
+      </CodeBlock>
 
-   <Dica>
-    Use <code>align="end"</code> no DropdownMenuContent para alinhar o menu à direita
-    do trigger. Para menus largos, defina uma largura fixa com <code>className="w-56"</code>.
-   </Dica>
+      <Dica>
+        Use <code>align="end"</code> no DropdownMenuContent para alinhar o menu à direita
+        do trigger. Para menus largos, defina uma largura fixa com <code>className="w-56"</code>.
+      </Dica>
 
-   <h2 className="text-2xl font-semibold mb-6 mt-8">Boas Práticas</h2>
+      <h2 className="text-2xl font-semibold mb-6 mt-8">Boas Práticas</h2>
 
-   <div className="space-y-4">
-    <div className="p-4 border border-green-200 bg-green-50 dark:border-green-800 dark:bg-green-950 rounded-lg">
-     <h3 className="font-semibold text-green-800 dark:text-green-200 mb-2">✅ Faça</h3>
-     <ul className="space-y-1 text-sm text-green-700 dark:text-green-300">
-      <li>• Use ícones consistentes para melhor reconhecimento</li>
-      <li>• Agrupe itens relacionados com separadores</li>
-      <li>• Use cores diferentes para ações destrutivas (vermelho)</li>
-      <li>• Implemente atalhos de teclado quando apropriado</li>
-      <li>• Mantenha labels claros e concisos</li>
-     </ul>
+      <div className="space-y-4">
+        <div className="p-4 border border-green-200 bg-green-50 dark:border-green-800 dark:bg-green-950 rounded-lg">
+          <h3 className="font-semibold text-green-800 dark:text-green-200 mb-2">✅ Faça</h3>
+          <ul className="space-y-1 text-sm text-green-700 dark:text-green-300">
+            <li>• Use ícones consistentes para melhor reconhecimento</li>
+            <li>• Agrupe itens relacionados com separadores</li>
+            <li>• Use cores diferentes para ações destrutivas (vermelho)</li>
+            <li>• Implemente atalhos de teclado quando apropriado</li>
+            <li>• Mantenha labels claros e concisos</li>
+          </ul>
+        </div>
+
+        <div className="p-4 border border-red-200 bg-red-50 dark:border-red-800 dark:bg-red-950 rounded-lg">
+          <h3 className="font-semibold text-red-800 dark:text-red-200 mb-2">❌ Evite</h3>
+          <ul className="space-y-1 text-sm text-red-700 dark:text-red-300">
+            <li>• Menus muito longos sem agrupamento</li>
+            <li>• Submenus muito profundos (máximo 2 níveis)</li>
+            <li>• Ações destrutivas sem confirmação</li>
+            <li>• Misturar diferentes tipos de interação no mesmo menu</li>
+            <li>• Esquecer de indicar estado atual em radio/checkbox items</li>
+          </ul>
+        </div>
+      </div>
     </div>
-
-    <div className="p-4 border border-red-200 bg-red-50 dark:border-red-800 dark:bg-red-950 rounded-lg">
-     <h3 className="font-semibold text-red-800 dark:text-red-200 mb-2">❌ Evite</h3>
-     <ul className="space-y-1 text-sm text-red-700 dark:text-red-300">
-      <li>• Menus muito longos sem agrupamento</li>
-      <li>• Submenus muito profundos (máximo 2 níveis)</li>
-      <li>• Ações destrutivas sem confirmação</li>
-      <li>• Misturar diferentes tipos de interação no mesmo menu</li>
-      <li>• Esquecer de indicar estado atual em radio/checkbox items</li>
-     </ul>
-    </div>
-   </div>
-  </div>
- )
+  )
 }

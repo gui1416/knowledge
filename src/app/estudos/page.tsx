@@ -97,7 +97,7 @@ const recentStudies = [
 export default function EstudosPage() {
  return (
   <div className="container mx-auto px-6 py-8 max-w-6xl">
-   {/* Header */}
+
    <div className="mb-8">
     <div className="flex items-center gap-3 mb-4">
      <div className="p-2 rounded-lg bg-blue-100 dark:bg-blue-900">
@@ -110,7 +110,6 @@ export default function EstudosPage() {
     </p>
    </div>
 
-   {/* Stats */}
    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
     <Card>
      <CardContent className="p-4 text-center">
@@ -138,7 +137,6 @@ export default function EstudosPage() {
     </Card>
    </div>
 
-   {/* Recent Studies */}
    <section className="mb-12">
     <div className="flex items-center gap-2 mb-6">
      <TrendingUp className="h-5 w-5 text-green-600" />
@@ -185,7 +183,6 @@ export default function EstudosPage() {
     </div>
    </section>
 
-   {/* Categories */}
    <section>
     <h2 className="text-2xl font-semibold mb-6">Categorias</h2>
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

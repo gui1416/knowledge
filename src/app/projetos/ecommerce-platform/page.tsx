@@ -8,7 +8,6 @@ import { ComponentPreview } from "@/components/mdx-components"
 export default function EcommercePlatformPage() {
  return (
   <div className="container mx-auto px-6 py-8 max-w-4xl">
-   {/* Header */}
    <div className="mb-8">
     <Button variant="ghost" size="sm" asChild className="mb-4">
      <Link href="/projetos">
@@ -35,7 +34,6 @@ export default function EcommercePlatformPage() {
     </p>
    </div>
 
-   {/* Progress */}
    <Card className="mb-8">
     <CardHeader>
      <CardTitle className="flex items-center gap-2">
@@ -80,7 +78,6 @@ export default function EcommercePlatformPage() {
     </CardContent>
    </Card>
 
-   {/* Tech Stack */}
    <section className="mb-8">
     <h2 className="text-2xl font-semibold mb-4">Stack Tecnológico</h2>
     <div className="grid md:grid-cols-3 gap-4">
@@ -131,7 +128,6 @@ export default function EcommercePlatformPage() {
     </div>
    </section>
 
-   {/* Demo */}
    <section className="mb-8">
     <h2 className="text-2xl font-semibold mb-4">Preview da Interface</h2>
     <ComponentPreview>
@@ -139,7 +135,6 @@ export default function EcommercePlatformPage() {
     </ComponentPreview>
    </section>
 
-   {/* Next Steps */}
    <section className="mb-8">
     <h2 className="text-2xl font-semibold mb-4">Próximos Passos</h2>
     <div className="space-y-3">
@@ -164,7 +159,6 @@ export default function EcommercePlatformPage() {
     </div>
    </section>
 
-   {/* Links */}
    <div className="flex gap-4">
     <Button asChild>
      <Link href="https://github.com/user/ecommerce-platform" target="_blank">
@@ -183,7 +177,6 @@ export default function EcommercePlatformPage() {
  )
 }
 
-// Demo Component
 function EcommerceDemo() {
  return (
   <div className="bg-white dark:bg-gray-900 rounded-lg border p-4 max-w-sm mx-auto">

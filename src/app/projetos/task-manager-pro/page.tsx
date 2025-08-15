@@ -8,7 +8,7 @@ import { ComponentPreview } from "@/components/mdx-components"
 export default function TaskManagerProPage() {
  return (
   <div className="container mx-auto px-6 py-8 max-w-4xl">
-   {/* Header */}
+
    <div className="mb-8">
     <Button variant="ghost" size="sm" asChild className="mb-4">
      <Link href="/projetos">
@@ -33,7 +33,6 @@ export default function TaskManagerProPage() {
     </p>
    </div>
 
-   {/* Project Info */}
    <div className="grid md:grid-cols-2 gap-6 mb-8">
     <Card>
      <CardHeader>
@@ -79,7 +78,6 @@ export default function TaskManagerProPage() {
     </Card>
    </div>
 
-   {/* Features */}
    <section className="mb-8">
     <h2 className="text-2xl font-semibold mb-4">Principais Funcionalidades</h2>
     <div className="grid md:grid-cols-2 gap-4">
@@ -101,7 +99,6 @@ export default function TaskManagerProPage() {
     </div>
    </section>
 
-   {/* Demo Component */}
    <section className="mb-8">
     <h2 className="text-2xl font-semibold mb-4">Demonstração</h2>
     <ComponentPreview>
@@ -109,7 +106,6 @@ export default function TaskManagerProPage() {
     </ComponentPreview>
    </section>
 
-   {/* Challenges & Solutions */}
    <section className="mb-8">
     <h2 className="text-2xl font-semibold mb-4">Desafios e Soluções</h2>
     <div className="space-y-4">
@@ -139,7 +135,6 @@ export default function TaskManagerProPage() {
     </div>
    </section>
 
-   {/* Links */}
    <div className="flex gap-4">
     <Button asChild>
      <Link href="https://github.com/user/task-manager" target="_blank">
@@ -158,7 +153,6 @@ export default function TaskManagerProPage() {
  )
 }
 
-// Demo Component
 function TaskManagerDemo() {
  return (
   <div className="bg-white dark:bg-gray-900 rounded-lg border p-4 max-w-md mx-auto">

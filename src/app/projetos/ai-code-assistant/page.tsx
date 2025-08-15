@@ -8,7 +8,7 @@ import { ComponentPreview } from "@/components/mdx-components"
 export default function AICodeAssistantPage() {
  return (
   <div className="container mx-auto px-6 py-8 max-w-4xl">
-   {/* Header */}
+
    <div className="mb-8">
     <Button variant="ghost" size="sm" asChild className="mb-4">
      <Link href="/projetos">
@@ -33,7 +33,6 @@ export default function AICodeAssistantPage() {
     </p>
    </div>
 
-   {/* Timeline */}
    <Card className="mb-8">
     <CardHeader>
      <CardTitle className="flex items-center gap-2">
@@ -59,7 +58,6 @@ export default function AICodeAssistantPage() {
     </CardContent>
    </Card>
 
-   {/* Objectives */}
    <section className="mb-8">
     <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
      <Target className="h-6 w-6" />
@@ -96,7 +94,6 @@ export default function AICodeAssistantPage() {
     </div>
    </section>
 
-   {/* Planned Features */}
    <section className="mb-8">
     <h2 className="text-2xl font-semibold mb-4">Funcionalidades Planejadas</h2>
     <div className="space-y-4">
@@ -148,7 +145,6 @@ export default function AICodeAssistantPage() {
     </div>
    </section>
 
-   {/* Tech Stack */}
    <section className="mb-8">
     <h2 className="text-2xl font-semibold mb-4">Stack Tecnológico Planejado</h2>
     <div className="grid md:grid-cols-3 gap-4">
@@ -199,7 +195,6 @@ export default function AICodeAssistantPage() {
     </div>
    </section>
 
-   {/* Mockup */}
    <section className="mb-8">
     <h2 className="text-2xl font-semibold mb-4">Conceito da Interface</h2>
     <ComponentPreview>
@@ -207,7 +202,6 @@ export default function AICodeAssistantPage() {
     </ComponentPreview>
    </section>
 
-   {/* Development Phases */}
    <section className="mb-8">
     <h2 className="text-2xl font-semibold mb-4">Fases de Desenvolvimento</h2>
     <div className="space-y-3">
@@ -241,7 +235,6 @@ export default function AICodeAssistantPage() {
     </div>
    </section>
 
-   {/* Research */}
    <section className="mb-8">
     <h2 className="text-2xl font-semibold mb-4">Pesquisa e Preparação</h2>
     <div className="grid md:grid-cols-2 gap-4">
@@ -275,7 +268,6 @@ export default function AICodeAssistantPage() {
     </div>
    </section>
 
-   {/* Action Button */}
    <div className="text-center">
     <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
      <Zap className="mr-2 h-4 w-4" />
@@ -286,7 +278,6 @@ export default function AICodeAssistantPage() {
  )
 }
 
-// Mockup Component
 function AIAssistantMockup() {
  return (
   <div className="bg-gray-900 text-white rounded-lg p-4 max-w-2xl mx-auto font-mono text-sm">

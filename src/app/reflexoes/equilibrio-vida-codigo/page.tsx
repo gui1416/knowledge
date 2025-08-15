@@ -30,7 +30,7 @@ export default function EquilibrioVidaCodigo() {
      <li>Pensar em código durante atividades não relacionadas ao trabalho</li>
      <li>Sentir culpa por não estar programando nos fins de semana</li>
      <li>Perder interesse em hobbies que não envolvem tecnologia</li>
-     <li>Dificuldade para "desligar" após o expediente</li>
+     <li>Dificuldade para &quot;desligar&quot; após o expediente</li>
     </ul>
 
     <h2>Estratégias que Funcionam</h2>
@@ -54,8 +54,8 @@ export default function EquilibrioVidaCodigo() {
     <div className="bg-muted p-6 rounded-lg my-8">
      <h3 className="text-lg font-semibold mb-3">🎯 Dica Prática</h3>
      <p className="text-sm">
-      "Implementei a regra do 'shutdown ritual': ao final do dia, escrevo três coisas que consegui fazer e três
-      para o próximo dia, depois fecho o laptop. Esse ritual mental me ajuda a 'desligar' do modo trabalho."
+      &quot;Implementei a regra do &apos;shutdown ritual&apos;: ao final do dia, escrevo três coisas que consegui fazer e três
+      para o próximo dia, depois fecho o laptop. Esse ritual mental me ajuda a &apos;desligar&apos; do modo trabalho.&quot;
      </p>
     </div>
 

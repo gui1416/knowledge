@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Code2, Copy, Star, TrendingUp, ArrowRight, Clock } from 'lucide-react'
+import { Code2, Copy, Star, TrendingUp, ArrowRight } from 'lucide-react'
 import Link from "next/link"
 
 const categories = [
@@ -114,7 +114,6 @@ export default function SnippetsPage() {
     </p>
    </div>
 
-   {/* Stats */}
    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
     <Card>
      <CardContent className="p-4 text-center">
@@ -142,7 +141,6 @@ export default function SnippetsPage() {
     </Card>
    </div>
 
-   {/* Popular Snippets */}
    <section className="mb-12">
     <div className="flex items-center gap-2 mb-6">
      <TrendingUp className="h-5 w-5 text-green-600" />
@@ -193,7 +191,6 @@ export default function SnippetsPage() {
     </div>
    </section>
 
-   {/* Categories */}
    <section>
     <h2 className="text-2xl font-semibold mb-6">Categorias</h2>
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

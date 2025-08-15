@@ -26,12 +26,12 @@ export function Callout({ type = "info", title, children }: CalloutProps) {
   return (
     <Alert
       className={`my-3 sm:my-4 md:my-6 ${type === "warning"
-          ? "border-yellow-200 bg-yellow-50 dark:border-yellow-800 dark:bg-yellow-950"
-          : type === "success"
-            ? "border-green-200 bg-green-50 dark:border-green-800 dark:bg-green-950"
-            : type === "error"
-              ? "border-red-200 bg-red-50 dark:border-red-800 dark:bg-red-950"
-              : "border-blue-200 bg-blue-50 dark:border-blue-800 dark:bg-blue-950"
+        ? "border-yellow-200 bg-yellow-50 dark:border-yellow-800 dark:bg-yellow-950"
+        : type === "success"
+          ? "border-green-200 bg-green-50 dark:border-green-800 dark:bg-green-950"
+          : type === "error"
+            ? "border-red-200 bg-red-50 dark:border-red-800 dark:bg-red-950"
+            : "border-blue-200 bg-blue-50 dark:border-blue-800 dark:bg-blue-950"
         }`}
     >
       <Icon className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0 mt-0.5 sm:mt-1" />
@@ -61,7 +61,7 @@ export function CodeBlock({ children, language, filename }: CodeBlockProps) {
 
 interface ComponentPreviewProps {
   children: ReactNode
-  code?: string // Made code prop optional
+  code?: string
   title?: string
   description?: string
 }

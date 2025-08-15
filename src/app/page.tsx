@@ -58,7 +58,6 @@ const featuredContent = [
 export default function HomePage() {
   return (
     <div className="container mx-auto px-6 py-8 max-w-6xl">
-      {/* Hero Section */}
       <div className="mb-12">
         <h1 className="text-4xl font-bold tracking-tight mb-4">
           Bem-vindo à minha documentação pessoal
@@ -82,7 +81,6 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
         <Card>
           <CardContent className="p-4 text-center">
@@ -114,7 +112,6 @@ export default function HomePage() {
         </Card>
       </div>
 
-      {/* Recent Updates */}
       <section className="mb-12">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-2xl font-semibold">Atualizações Recentes</h2>
@@ -159,7 +156,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Featured Content */}
       <section>
         <div className="flex items-center gap-2 mb-6">
           <Star className="h-5 w-5 text-yellow-500" />

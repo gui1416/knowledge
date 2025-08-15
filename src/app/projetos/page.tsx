@@ -115,7 +115,6 @@ const categories = [
 export default function ProjetosPage() {
  return (
   <div className="container mx-auto px-6 py-8 max-w-6xl">
-   {/* Header */}
    <div className="mb-8">
     <div className="flex items-center gap-3 mb-4">
      <div className="p-2 rounded-lg bg-orange-100 dark:bg-orange-900">
@@ -128,7 +127,6 @@ export default function ProjetosPage() {
     </p>
    </div>
 
-   {/* Stats */}
    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
     <Card>
      <CardContent className="p-4 text-center">
@@ -156,7 +154,6 @@ export default function ProjetosPage() {
     </Card>
    </div>
 
-   {/* Featured Projects */}
    <section className="mb-12">
     <div className="flex items-center gap-2 mb-6">
      <Star className="h-5 w-5 text-yellow-500" />
@@ -193,7 +190,6 @@ export default function ProjetosPage() {
           </h3>
           <p className="text-muted-foreground mb-3">{project.description}</p>
 
-          {/* Progress Bar */}
           {project.progress < 100 && (
            <div className="mb-3">
             <div className="flex items-center justify-between text-sm mb-1">
@@ -246,7 +242,6 @@ export default function ProjetosPage() {
     </div>
    </section>
 
-   {/* Upcoming Projects */}
    <section className="mb-12">
     <div className="flex items-center gap-2 mb-6">
      <TrendingUp className="h-5 w-5 text-blue-600" />
@@ -290,7 +285,6 @@ export default function ProjetosPage() {
     </div>
    </section>
 
-   {/* Categories */}
    <section>
     <h2 className="text-2xl font-semibold mb-6">Categorias</h2>
     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">

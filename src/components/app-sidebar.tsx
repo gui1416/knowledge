@@ -159,7 +159,6 @@ async function getLatestCommitDate() {
   console.error("Error fetching latest commit date:", error)
  }
 
- // Fallback to current date if API fails
  return new Date().toLocaleDateString("pt-BR")
 }
 

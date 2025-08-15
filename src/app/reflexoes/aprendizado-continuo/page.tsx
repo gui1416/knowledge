@@ -7,7 +7,7 @@ import Link from "next/link"
 export default function AprendizadoContinuoPage() {
  return (
   <div className="container mx-auto px-6 py-8 max-w-4xl">
-   {/* Header */}
+
    <div className="mb-8">
     <Button variant="ghost" size="sm" asChild className="mb-4">
      <Link href="/reflexoes">
@@ -37,7 +37,6 @@ export default function AprendizadoContinuoPage() {
     </div>
    </div>
 
-   {/* Article Content */}
    <article className="prose prose-lg dark:prose-invert max-w-none">
     <div className="bg-muted/50 rounded-lg p-6 mb-8">
      <p className="text-lg leading-relaxed m-0">
@@ -56,7 +55,7 @@ export default function AprendizadoContinuoPage() {
      humildade é uma das qualidades mais importantes de um desenvolvedor.
     </p>
 
-    <blockquote>"A única constante na tecnologia é a mudança. Quem não se adapta, fica para trás."</blockquote>
+    <blockquote>&quot;A única constante na tecnologia é a mudança. Quem não se adapta, fica para trás.&quot;</blockquote>
 
     <h2>Estratégias que Funcionam</h2>
 
@@ -127,7 +126,7 @@ export default function AprendizadoContinuoPage() {
     <div className="bg-blue-50 dark:bg-blue-950 rounded-lg p-6 my-8">
      <h3 className="text-blue-800 dark:text-blue-200 mb-3">💡 Dica Prática</h3>
      <p className="text-blue-700 dark:text-blue-300 m-0">
-      Mantenha um "learning log" - um documento onde você anota o que aprendeu a cada semana. É incrível ver o
+      Mantenha um &quot;learning log&quot; - um documento onde você anota o que aprendeu a cada semana. É incrível ver o
       progresso acumulado ao longo do tempo e serve como motivação nos dias mais difíceis.
      </p>
     </div>
@@ -147,7 +146,6 @@ export default function AprendizadoContinuoPage() {
     </p>
    </article>
 
-   {/* Tags and Engagement */}
    <div className="mt-12 pt-8 border-t">
     <div className="flex items-center justify-between mb-6">
      <div className="flex flex-wrap gap-2">
@@ -169,7 +167,6 @@ export default function AprendizadoContinuoPage() {
      </div>
     </div>
 
-    {/* Related Reflections */}
     <div>
      <h3 className="text-lg font-semibold mb-4">Reflexões Relacionadas</h3>
      <div className="grid md:grid-cols-2 gap-4">

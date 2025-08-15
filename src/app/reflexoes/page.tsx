@@ -119,7 +119,6 @@ const moodColors = {
 export default function ReflexoesPage() {
  return (
   <div className="container mx-auto px-6 py-8 max-w-6xl">
-   {/* Header */}
    <div className="mb-8">
     <div className="flex items-center gap-3 mb-4">
      <div className="p-2 rounded-lg bg-yellow-100 dark:bg-yellow-900">
@@ -132,7 +131,6 @@ export default function ReflexoesPage() {
     </p>
    </div>
 
-   {/* Stats */}
    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
     <Card>
      <CardContent className="p-4 text-center">
@@ -160,7 +158,6 @@ export default function ReflexoesPage() {
     </Card>
    </div>
 
-   {/* Featured Reflections */}
    <section className="mb-12">
     <div className="flex items-center gap-2 mb-6">
      <Heart className="h-5 w-5 text-red-500" />
@@ -214,7 +211,6 @@ export default function ReflexoesPage() {
     </div>
    </section>
 
-   {/* Recent Reflections */}
    <section className="mb-12">
     <div className="flex items-center gap-2 mb-6">
      <TrendingUp className="h-5 w-5 text-green-600" />
@@ -255,7 +251,6 @@ export default function ReflexoesPage() {
     </div>
    </section>
 
-   {/* Categories */}
    <section>
     <h2 className="text-2xl font-semibold mb-6">Categorias</h2>
     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">

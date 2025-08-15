@@ -288,7 +288,7 @@ function CallbackExample() {
 }
 
 function MemoExample() {
-  const [numbers, setNumbers] = useState([1, 2, 3, 4, 5])
+  const [numbers] = useState([1, 2, 3, 4, 5])
   const [multiplier, setMultiplier] = useState(1)
   const [unrelated, setUnrelated] = useState(0)
 

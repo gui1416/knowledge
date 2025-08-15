@@ -31,11 +31,11 @@ export default function FeedbackConstrutivo() {
     </p>
     <ul>
      <li>
-      <strong>Seja específico:</strong> "Este código poderia ser mais legível" vs "Esta função tem muitas
-      responsabilidades"
+      <strong>Seja específico:</strong> &quot;Este código poderia ser mais legível&quot; vs &quot;Esta função tem muitas
+      responsabilidades&quot;
      </li>
      <li>
-      <strong>Foque no comportamento, não na pessoa:</strong> "O código" não "Você"
+      <strong>Foque no comportamento, não na pessoa:</strong> &quot;O código&quot; não &quot;Você&quot;
      </li>
      <li>
       <strong>Ofereça soluções:</strong> Não apenas identifique problemas, sugira melhorias
@@ -69,9 +69,9 @@ export default function FeedbackConstrutivo() {
     <div className="bg-muted p-6 rounded-lg my-8">
      <h3 className="text-lg font-semibold mb-3">💡 Reflexão Pessoal</h3>
      <p className="text-sm">
-      "Mudei minha perspectiva sobre code reviews quando comecei a vê-las como conversas colaborativas ao invés de
+      &quot;Mudei minha perspectiva sobre code reviews quando comecei a vê-las como conversas colaborativas ao invés de
       avaliações. Isso transformou não apenas a qualidade do código, mas também o relacionamento com minha
-      equipe."
+      equipe.&quot;
      </p>
     </div>
 

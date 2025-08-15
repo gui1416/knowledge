@@ -40,8 +40,8 @@ export default function ClosuresPage() {
 }
 
 function ContadorExample() {
-  const [contador1, setContador1] = useState(() => criarContador())
-  const [contador2, setContador2] = useState(() => criarContador())
+  const [contador1] = useState(() => criarContador())
+  const [contador2] = useState(() => criarContador())
   const [valor1, setValor1] = useState(0)
   const [valor2, setValor2] = useState(0)
 
@@ -159,8 +159,8 @@ function ContadorExample() {
     }
   }
 
-  const [contador1, setContador1] = useState(() => criarContador())
-  const [contador2, setContador2] = useState(() => criarContador())
+  const [contador1] = useState(() => criarContador())
+  const [contador2] = useState(() => criarContador())
   const [valor1, setValor1] = useState(0)
   const [valor2, setValor2] = useState(0)
 
