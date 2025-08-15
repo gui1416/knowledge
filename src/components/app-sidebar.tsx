@@ -133,7 +133,7 @@ const navigationData = [
  {
   title: "Artigos",
   icon: FileText,
-  items: [{ title: "Arquitetura Frontend Moderna", url: "/artigos/arquitetura-frontend-moderna" }],
+  items: [{ title: "Arquitetura Frontend Moderna", url: "/artigos/arquitetura-frontend" }],
  },
 ]
 

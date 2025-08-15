@@ -158,7 +158,7 @@ const searchData = [
   items: [
    {
     title: "Arquitetura Frontend Moderna",
-    url: "/artigos/arquitetura-frontend-moderna",
+    url: "/artigos/arquitetura-frontend",
     description: "Padrões e estruturas escaláveis",
    },
   ],
