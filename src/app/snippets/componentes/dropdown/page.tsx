@@ -560,8 +560,8 @@ export {
       </CodeBlock>
 
       <Dica>
-        Use <code>align="end"</code> no DropdownMenuContent para alinhar o menu à direita
-        do trigger. Para menus largos, defina uma largura fixa com <code>className="w-56"</code>.
+        Use <code>align=&quot;end&quot;</code> no DropdownMenuContent para alinhar o menu à direita
+        do trigger. Para menus largos, defina uma largura fixa com <code>className=&quot;w-56&quot;</code>.
       </Dica>
 
       <h2 className="text-2xl font-semibold mb-6 mt-8">Boas Práticas</h2>
