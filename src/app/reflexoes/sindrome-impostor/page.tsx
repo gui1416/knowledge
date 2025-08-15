@@ -9,15 +9,15 @@ export default function SindromeImpostorPage() {
         <h1>A Síndrome do Impostor no Desenvolvimento</h1>
 
         <p>
-          "Eu não sei o suficiente", "Qualquer hora vão descobrir que sou uma fraude",
-          "Todo mundo aqui é mais inteligente que eu". Se você já pensou isso,
+          &quot;Eu não sei o suficiente&quot;, &quot;Qualquer hora vão descobrir que sou uma fraude&quot;,
+          &quot;Todo mundo aqui é mais inteligente que eu&quot;. Se você já pensou isso,
           você não está sozinho. A síndrome do impostor é mais comum na área de
           tecnologia do que imaginamos.
         </p>
 
         <Callout type="info" title="O que é a Síndrome do Impostor?">
           É um padrão psicológico onde a pessoa duvida de suas conquistas e tem
-          medo persistente de ser "descoberta" como uma fraude, apesar de evidências
+          medo persistente de ser &quot;descoberta&quot; como uma fraude, apesar de evidências
           externas de sua competência.
         </Callout>
 
@@ -62,9 +62,9 @@ export async function getStaticProps() {
 // E a roda continua girando...`}
         </CodeBlock>
 
-        <h3>2. Cultura do "Rockstar Developer"</h3>
+        <h3>2. Cultura do &quot;Rockstar Developer&quot;</h3>
         <p>
-          A glorificação de desenvolvedores "geniais" que criam projetos sozinhos
+          A glorificação de desenvolvedores &quot;geniais&quot; que criam projetos sozinhos
           pode fazer outros se sentirem inadequados por precisarem de ajuda ou
           tempo para aprender.
         </p>
@@ -72,7 +72,7 @@ export async function getStaticProps() {
         <h3>3. Síndrome do Stack Overflow</h3>
         <p>
           Copiar código do Stack Overflow é normal e necessário, mas pode gerar
-          culpa e sensação de não ser um "programador de verdade".
+          culpa e sensação de não ser um &quot;programador de verdade&quot;.
         </p>
 
         <Dica>
@@ -85,7 +85,7 @@ export async function getStaticProps() {
 
         <h3>1. O Perfeccionista</h3>
         <p>
-          "Meu código não está bom o suficiente. Preciso refatorar tudo antes de fazer commit."
+          &quot;Meu código não está bom o suficiente. Preciso refatorar tudo antes de fazer commit.&quot;
         </p>
 
         <CodeBlock language="typescript" filename="perfeccionista.ts">
@@ -118,22 +118,22 @@ function calculateUserScore(user: User): number {
 
         <h3>2. O Especialista</h3>
         <p>
-          "Não posso aplicar para essa vaga porque não sei 100% das tecnologias listadas."
+          &quot;Não posso aplicar para essa vaga porque não sei 100% das tecnologias listadas.&quot;
         </p>
 
         <h3>3. O Gênio Natural</h3>
         <p>
-          "Se eu fosse realmente bom, isso seria fácil para mim. Não deveria precisar estudar tanto."
+          &quot;Se eu fosse realmente bom, isso seria fácil para mim. Não deveria precisar estudar tanto.&quot;
         </p>
 
         <h3>4. O Individualista</h3>
         <p>
-          "Pedir ajuda mostra que não sou capaz. Preciso resolver tudo sozinho."
+          &quot;Pedir ajuda mostra que não sou capaz. Preciso resolver tudo sozinho.&quot;
         </p>
 
         <h3>5. O Super-herói</h3>
         <p>
-          "Preciso ser o melhor em tudo e ajudar todo mundo, senão não sou valioso para a equipe."
+          &quot;Preciso ser o melhor em tudo e ajudar todo mundo, senão não sou valioso para a equipe.&quot;
         </p>
 
         <h2>Sinais de que você pode estar sofrendo</h2>
@@ -141,11 +141,11 @@ function calculateUserScore(user: User): number {
         <ul>
           <li>Atribuir sucessos à sorte ou fatores externos</li>
           <li>Medo excessivo de fazer perguntas</li>
-          <li>Procrastinação por medo de não fazer "perfeito"</li>
+          <li>Procrastinação por medo de não fazer &quot;perfeito&quot;</li>
           <li>Comparação constante com outros desenvolvedores</li>
-          <li>Sensação de que "qualquer hora vão me demitir"</li>
+          <li>Sensação de que &quot;qualquer hora vão me demitir&quot;</li>
           <li>Minimizar suas próprias conquistas</li>
-          <li>Trabalhar excessivamente para "compensar" a suposta incompetência</li>
+          <li>Trabalhar excessivamente para &quot;compensar&quot; a suposta incompetência</li>
           <li>Evitar desafios por medo de falhar</li>
         </ul>
 
@@ -207,7 +207,7 @@ const myLearningJourney: LearningLog[] = [
 
         <p>
           Manter um registro do que você aprende ajuda a visualizar seu progresso
-          e combater a sensação de que "não sabe nada".
+          e combater a sensação de que &quot;não sabe nada&quot;.
         </p>
 
         <CodeBlock language="markdown" filename="learning-journal.md">
@@ -392,7 +392,7 @@ const waysToContribute = {
           e mostra que você tentou antes de pedir ajuda.
         </p>
 
-        <h3>2. Mantenha uma "brag list"</h3>
+        <h3>2. Mantenha uma &quot;brag list&quot;</h3>
 
         <CodeBlock language="markdown" filename="brag-list.md">
           {`# Minhas Conquistas Profissionais
@@ -424,7 +424,7 @@ const waysToContribute = {
 - Communication: melhorei explicações técnicas`}
         </CodeBlock>
 
-        <h3>3. Pratique o "teaching effect"</h3>
+        <h3>3. Pratique o &quot;teaching effect&quot;</h3>
 
         <p>
           Ensinar outros é uma das melhores formas de consolidar conhecimento
@@ -486,7 +486,7 @@ console.log(contador.valor()); // 11
  */`}
         </CodeBlock>
 
-        <h3>4. Redefina "ser bom em programação"</h3>
+        <h3>4. Redefina &quot;ser bom em programação&quot;</h3>
 
         <p>
           Ser um bom desenvolvedor não é sobre saber tudo, mas sobre:
@@ -568,7 +568,7 @@ console.log("Você chegou até aqui. Isso já é uma conquista! 🚀");`}
 
         <p>
           <em>
-            "O expert em qualquer coisa já foi um iniciante." - Helen Hayes
+            &quot;O expert em qualquer coisa já foi um iniciante.&quot; - Helen Hayes
           </em>
         </p>
       </article>

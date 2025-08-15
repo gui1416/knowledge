@@ -235,8 +235,8 @@ function SearchExample() {
      placeholder="Digite para buscar..."
      className="w-full px-3 py-2 border rounded-md"
     />
-    <p className="text-sm text-muted-foreground mt-1">Valor atual: "{searchTerm}"</p>
-    <p className="text-sm text-muted-foreground">Valor com debounce: "{debouncedSearchTerm}"</p>
+    <p className="text-sm text-muted-foreground mt-1">Valor atual: &quot;{searchTerm}&quot;</p>
+    <p className="text-sm text-muted-foreground">Valor com debounce: &quot;{debouncedSearchTerm}&quot;</p>
    </div>
 
    {isSearching && <div className="text-sm text-muted-foreground">Buscando...</div>}

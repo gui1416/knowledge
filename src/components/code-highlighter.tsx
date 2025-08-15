@@ -37,7 +37,6 @@ export function CodeHighlighter({ code, language, filename }: CodeHighlighterPro
 
   if (!lang || lang === "text") return [{ type: "text", value: code, start: 0, end: code.length }]
 
-  const tokens: Token[] = []
   const patterns = [
    { type: "comment", regex: /\/\/.*$/gm },
    { type: "comment", regex: /\/\*[\s\S]*?\*\//g },

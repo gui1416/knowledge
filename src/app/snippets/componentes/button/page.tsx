@@ -333,7 +333,7 @@ export { Button, buttonVariants }`}
           <ul className="space-y-1 text-sm text-red-700 dark:text-red-300">
             <li>• Usar muitas variantes diferentes na mesma interface</li>
             <li>• Botões muito pequenos em dispositivos touch</li>
-            <li>• Textos genéricos como "Clique aqui" ou "Botão"</li>
+            <li>• Textos genéricos como &quot;Clique aqui&quot; ou &quot;Botão&quot;</li>
             <li>• Esquecer de implementar estados de loading</li>
           </ul>
         </div>

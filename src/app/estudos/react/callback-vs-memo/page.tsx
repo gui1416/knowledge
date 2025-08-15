@@ -258,7 +258,7 @@ const Component = () => {
         <ol>
           <li><strong>Meça antes de otimizar</strong>: Use React DevTools Profiler</li>
           <li><strong>Combine com React.memo</strong>: useCallback é mais útil com componentes memorizados</li>
-          <li><strong>Cuidado com dependências</strong>: Arrays e objetos sempre "mudam"</li>
+          <li><strong>Cuidado com dependências</strong>: Arrays e objetos sempre &quot;mudam&quot;</li>
           <li><strong>Considere o custo</strong>: Memorização tem overhead próprio</li>
         </ol>
 
