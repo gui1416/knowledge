@@ -1,32 +1,34 @@
+'use client'
+
 import { mdxComponents } from "@/components/mdx-components"
 
 const { Callout, CodeBlock, Dica } = mdxComponents
 
 export default function CallbackVsMemoPage() {
- return (
-  <div className="container mx-auto px-6 py-8 max-w-4xl">
-   <article className="prose prose-slate dark:prose-invert max-w-none">
-    <h1>useCallback vs useMemo: Quando e Como Usar</h1>
+  return (
+    <div className="container mx-auto px-6 py-8 max-w-4xl">
+      <article className="prose prose-slate dark:prose-invert max-w-none">
+        <h1>useCallback vs useMemo: Quando e Como Usar</h1>
 
-    <p>
-     Os hooks useCallback e useMemo são ferramentas poderosas para otimização de performance
-     em React, mas é comum haver confusão sobre quando usar cada um.
-    </p>
+        <p>
+          Os hooks useCallback e useMemo são ferramentas poderosas para otimização de performance
+          em React, mas é comum haver confusão sobre quando usar cada um.
+        </p>
 
-    <Callout type="info" title="Objetivo do Artigo">
-     Vamos entender as diferenças práticas entre useCallback e useMemo,
-     quando usar cada um e como evitar otimizações desnecessárias.
-    </Callout>
+        <Callout type="info" title="Objetivo do Artigo">
+          Vamos entender as diferenças práticas entre useCallback e useMemo,
+          quando usar cada um e como evitar otimizações desnecessárias.
+        </Callout>
 
-    <h2>useCallback - Memorizando Funções</h2>
+        <h2>useCallback - Memorizando Funções</h2>
 
-    <p>
-     O useCallback memoriza uma função, retornando a mesma referência
-     enquanto suas dependências não mudarem.
-    </p>
+        <p>
+          O useCallback memoriza uma função, retornando a mesma referência
+          enquanto suas dependências não mudarem.
+        </p>
 
-    <CodeBlock language="typescript" filename="useCallback-exemplo.tsx">
-     {`import React, { useCallback, useState } from 'react';
+        <CodeBlock language="typescript" filename="useCallback-exemplo.tsx">
+          {`import React, { useCallback, useState } from 'react';
 
 interface ChildProps {
   onClick: () => void;
@@ -69,22 +71,22 @@ function Parent() {
     </div>
   );
 }`}
-    </CodeBlock>
+        </CodeBlock>
 
-    <Dica>
-     No exemplo acima, o componente Child com handleClickBad será re-renderizado
-     toda vez que Parent renderizar, mesmo sendo envolvido por React.memo.
-    </Dica>
+        <Dica>
+          No exemplo acima, o componente Child com handleClickBad será re-renderizado
+          toda vez que Parent renderizar, mesmo sendo envolvido por React.memo.
+        </Dica>
 
-    <h2>useMemo - Memorizando Valores</h2>
+        <h2>useMemo - Memorizando Valores</h2>
 
-    <p>
-     O useMemo memoriza o resultado de um cálculo, evitando recalcular
-     valores caros desnecessariamente.
-    </p>
+        <p>
+          O useMemo memoriza o resultado de um cálculo, evitando recalcular
+          valores caros desnecessariamente.
+        </p>
 
-    <CodeBlock language="typescript" filename="useMemo-exemplo.tsx">
-     {`import React, { useMemo, useState } from 'react';
+        <CodeBlock language="typescript" filename="useMemo-exemplo.tsx">
+          {`import React, { useMemo, useState } from 'react';
 
 function ExpensiveComponent() {
   const [count, setCount] = useState(0);
@@ -122,14 +124,14 @@ function ExpensiveComponent() {
     </div>
   );
 }`}
-    </CodeBlock>
+        </CodeBlock>
 
-    <h2>Casos Práticos de Uso</h2>
+        <h2>Casos Práticos de Uso</h2>
 
-    <h3>useCallback - Quando Usar</h3>
+        <h3>useCallback - Quando Usar</h3>
 
-    <CodeBlock language="typescript" filename="useCallback-casos.tsx">
-     {`// 1. Passando funções para componentes memorizados
+        <CodeBlock language="typescript" filename="useCallback-casos.tsx">
+          {`// 1. Passando funções para componentes memorizados
 const MemoizedChild = React.memo(({ onSubmit }) => {
   return <form onSubmit={onSubmit}>...</form>;
 });
@@ -157,12 +159,12 @@ function Component() {
 
   useCustomHook(stableCallback);
 }`}
-    </CodeBlock>
+        </CodeBlock>
 
-    <h3>useMemo - Quando Usar</h3>
+        <h3>useMemo - Quando Usar</h3>
 
-    <CodeBlock language="typescript" filename="useMemo-casos.tsx">
-     {`// 1. Cálculos caros
+        <CodeBlock language="typescript" filename="useMemo-casos.tsx">
+          {`// 1. Cálculos caros
 function DataProcessor({ data }) {
   const processedData = useMemo(() => {
     return data
@@ -206,17 +208,17 @@ function Provider({ children }) {
     </Context.Provider>
   );
 }`}
-    </CodeBlock>
+        </CodeBlock>
 
-    <Callout type="warning" title="Cuidado com Over-optimization">
-     Nem sempre usar useCallback e useMemo é benéfico. Eles têm um custo próprio
-     e só devem ser usados quando realmente necessário.
-    </Callout>
+        <Callout type="warning" title="Cuidado com Over-optimization">
+          Nem sempre usar useCallback e useMemo é benéfico. Eles têm um custo próprio
+          e só devem ser usados quando realmente necessário.
+        </Callout>
 
-    <h2>Quando NÃO Usar</h2>
+        <h2>Quando NÃO Usar</h2>
 
-    <CodeBlock language="typescript" filename="quando-nao-usar.tsx">
-     {`// ❌ Não use para valores primitivos simples
+        <CodeBlock language="typescript" filename="quando-nao-usar.tsx">
+          {`// ❌ Não use para valores primitivos simples
 const Component = () => {
   const [name, setName] = useState('');
   
@@ -248,20 +250,20 @@ const Component = () => {
     timestamp: Date.now(), // Sempre diferente!
     items: items
   }), [items]);
-};</`>
+};`}
         </CodeBlock>
 
-    <h2>Dicas de Performance</h2>
+        <h2>Dicas de Performance</h2>
 
-    <ol>
-     <li><strong>Meça antes de otimizar</strong>: Use React DevTools Profiler</li>
-     <li><strong>Combine com React.memo</strong>: useCallback é mais útil com componentes memorizados</li>
-     <li><strong>Cuidado com dependências</strong>: Arrays e objetos sempre "mudam"</li>
-     <li><strong>Considere o custo</strong>: Memorização tem overhead próprio</li>
-    </ol>
+        <ol>
+          <li><strong>Meça antes de otimizar</strong>: Use React DevTools Profiler</li>
+          <li><strong>Combine com React.memo</strong>: useCallback é mais útil com componentes memorizados</li>
+          <li><strong>Cuidado com dependências</strong>: Arrays e objetos sempre "mudam"</li>
+          <li><strong>Considere o custo</strong>: Memorização tem overhead próprio</li>
+        </ol>
 
-    <CodeBlock language="typescript" filename="profiling-exemplo.tsx">
-     {`// Use React DevTools para identificar re-renders desnecessários
+        <CodeBlock language="typescript" filename="profiling-exemplo.tsx">
+          {`// Use React DevTools para identificar re-renders desnecessários
 function ProfiledComponent() {
   // Envolva componentes suspeitos com Profiler
   return (
@@ -276,25 +278,25 @@ function onRenderCallback(id, phase, actualDuration) {
   console.log('Phase:', phase);
   console.log('Duration:', actualDuration);
 }`}
-    </CodeBlock>
+        </CodeBlock>
 
-    <h2>Conclusão</h2>
+        <h2>Conclusão</h2>
 
-    <p>
-     useCallback e useMemo são ferramentas valiosas, mas devem ser usados com parcimônia:
-    </p>
+        <p>
+          useCallback e useMemo são ferramentas valiosas, mas devem ser usados com parcimônia:
+        </p>
 
-    <ul>
-     <li><strong>useCallback</strong>: Para estabilizar referências de funções</li>
-     <li><strong>useMemo</strong>: Para evitar cálculos caros desnecessários</li>
-     <li><strong>Ambos</strong>: Só quando há benefício real de performance</li>
-    </ul>
+        <ul>
+          <li><strong>useCallback</strong>: Para estabilizar referências de funções</li>
+          <li><strong>useMemo</strong>: Para evitar cálculos caros desnecessários</li>
+          <li><strong>Ambos</strong>: Só quando há benefício real de performance</li>
+        </ul>
 
-    <Callout type="success" title="Regra de Ouro">
-     Otimize baseado em medições reais, não em suposições.
-     Use as ferramentas de profiling do React para identificar gargalos reais.
-    </Callout>
-   </article>
-  </div>
- )
+        <Callout type="success" title="Regra de Ouro">
+          Otimize baseado em medições reais, não em suposições.
+          Use as ferramentas de profiling do React para identificar gargalos reais.
+        </Callout>
+      </article>
+    </div>
+  )
 }
