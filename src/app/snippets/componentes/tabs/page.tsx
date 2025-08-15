@@ -618,7 +618,7 @@ export { Tabs, TabsList, TabsTrigger, TabsContent }`}
       </CodeBlock>
 
       <Dica>
-        Use <code>grid w-full grid-cols-{n}</code> no TabsList para tabs de largura igual.
+        Use <code>grid w-full grid-cols-n</code> no TabsList para tabs de largura igual.
         Para tabs responsivas, esconda texto em telas pequenas com <code>hidden sm:inline</code>.
       </Dica>
 
